@@ -1,0 +1,170 @@
+body{
+margin:0;
+background:radial-gradient(circle at center,#2b0000 0%,#000000 80%);
+color:white;
+font-family:'Orbitron',sans-serif;
+overflow:hidden;
+text-align:center;
+}
+
+.glow{
+color:#ff3b3b;
+text-shadow:0 0 10px red,0 0 30px #990000;
+}
+
+.screen{
+position:absolute;
+width:100%;
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+transition:opacity 1s ease;
+}
+
+.hidden{
+opacity:0;
+pointer-events:none;
+}
+
+/* Baymax */
+#baymax{
+width:280px;
+animation:float 3s ease-in-out infinite;
+filter:drop-shadow(0 0 25px red);
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+}
+
+/* Loading */
+#loadingContainer{
+width:300px;
+height:20px;
+border:2px solid red;
+border-radius:20px;
+overflow:hidden;
+margin-top:20px;
+box-shadow:0 0 20px red;
+}
+
+#loadingBar{
+height:100%;
+width:0%;
+background:linear-gradient(90deg,#ff0000,#ff6a6a);
+}
+
+/* Cake scene */
+#cakeScene{
+display:flex;
+align-items:flex-end;
+gap:50px;
+margin-top:30px;
+}
+
+.sunflowers{
+font-size:80px;
+filter:drop-shadow(0 0 25px gold);
+animation:glowPulse 2s infinite alternate;
+}
+
+@keyframes glowPulse{
+from{filter:drop-shadow(0 0 10px gold);}
+to{filter:drop-shadow(0 0 30px orange);}
+}
+
+.cake{
+position:relative;
+width:220px;
+height:140px;
+border-radius:20px;
+cursor:pointer;
+transform:perspective(600px) rotateX(15deg);
+box-shadow:0 20px 0 #cc5200,0 0 30px orange;
+overflow:hidden;
+}
+
+.layer1{position:absolute;bottom:0;height:45px;width:100%;background:#ff7a1a;}
+.layer2{position:absolute;bottom:45px;height:25px;width:100%;background:#fff2cc;}
+.layer3{position:absolute;bottom:70px;height:45px;width:100%;background:#ff7a1a;}
+
+.frosting{
+position:absolute;
+top:-35px;
+width:100%;
+height:60px;
+background:#fff8f8;
+border-radius:50% 50% 20px 20px;
+box-shadow:0 0 20px white;
+}
+
+.candle{
+position:absolute;
+width:10px;
+height:45px;
+background:white;
+top:-75px;
+border-radius:5px;
+}
+
+.candle:nth-child(5){left:60px;}
+.candle:nth-child(6){right:60px;}
+
+.flame{
+position:absolute;
+width:14px;
+height:22px;
+background:orange;
+border-radius:50%;
+top:-20px;
+left:-2px;
+animation:flicker 0.3s infinite alternate;
+}
+
+@keyframes flicker{
+from{transform:scale(1);}
+to{transform:scale(1.2);}
+}
+
+.smoke{
+position:absolute;
+width:12px;
+height:20px;
+background:rgba(200,200,200,0.6);
+border-radius:50%;
+top:-20px;
+left:-1px;
+animation:smokeRise 2s forwards;
+}
+
+@keyframes smokeRise{
+0%{opacity:1; transform:translateY(0);}
+100%{opacity:0; transform:translateY(-40px);}
+}
+
+#knife{
+position:absolute;
+font-size:100px;
+right:-250px;
+top:45%;
+transition:1s ease;
+}
+
+.slice{
+position:absolute;
+width:70px;
+height:140px;
+right:0;
+display:none;
+}
+
+canvas{
+position:absolute;
+top:0;
+left:0;
+pointer-events:none;
+}
