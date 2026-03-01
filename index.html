@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baymax v18</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<canvas id="confetti"></canvas>
+
+<div class="screen" id="screen1">
+<h1 class="glow">HELLO</h1>
+<img src="MeetBaymax.gif" id="baymax">
+
+<div id="loadingContainer">
+<div id="loadingBar"></div>
+</div>
+
+<h2 id="upgradeText" class="glow"></h2>
+<button onclick="startVoice()">Activate</button>
+<audio id="baymaxAudio" src="baymax-voice.mp3"></audio>
+</div>
+
+<div class="screen hidden" id="screen2">
+<h2 id="typewriter"></h2>
+<button onclick="showCake()">Continue</button>
+</div>
+
+<div class="screen hidden" id="screen3">
+<h1 class="glow" id="cakeTitle">Blow the candles first ✨</h1>
+
+<div id="cakeScene">
+
+<div class="sunflowers">🌻🌻🌻</div>
+
+<div class="cake" onclick="handleCakeClick()">
+
+<div class="layer1"></div>
+<div class="layer2"></div>
+<div class="layer3"></div>
+<div class="frosting"></div>
+
+<div class="candle"><div class="flame"></div></div>
+<div class="candle"><div class="flame"></div></div>
+
+<div class="slice" id="slice">
+<div class="layer1"></div>
+<div class="layer2"></div>
+<div class="layer3"></div>
+</div>
+
+</div>
+
+</div>
+
+<div id="knife">🔪</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
